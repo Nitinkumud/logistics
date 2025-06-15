@@ -1,0 +1,131 @@
+<!-- ==== Hero Section ==== -->
+<section class="dsp">
+    <div class="dsp__content">
+      <h1 class="dsp__title">
+        Own your future: Join our U.S. delivery network
+      </h1>
+      <p class="dsp__subtitle">
+        Build your own business as a eazeeship Delivery Service Partner and
+        make an impact in your community.
+      </p>
+      <button
+        type="button"
+        class="dsp__button"
+        (click)="onApply()"
+      >
+        Apply Now
+      </button>
+    </div>
+  
+    <div class="dsp__images">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/008/084/549/small/transport-vehicle-and-logistics-concept-3d-render-free-photo.JPG" alt="Delivery Man" />
+
+    </div>
+  </section>
+  
+  <!-- ==== Application Form Section ==== -->
+  <section
+    class="dsp-apply"
+    *ngIf="showForm"
+  >
+    <div class="dsp-apply__wrapper">
+      <!-- left: the form -->
+      <form
+        [formGroup]="applyForm"
+        (ngSubmit)="onSubmit()"
+        class="dsp-apply__form"
+      >
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name <span>*</span></label>
+            <input type="text" formControlName="firstName" />
+            <div
+              class="error"
+              *ngIf="applyForm.get('firstName')?.touched && applyForm.get('firstName')?.invalid"
+            >
+              Required
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label>Last Name <span>*</span></label>
+            <input type="text" formControlName="lastName" />
+            <div
+              class="error"
+              *ngIf="applyForm.get('lastName')?.touched && applyForm.get('lastName')?.invalid"
+            >
+              Required
+            </div>
+          </div>
+        </div>
+  
+        <div class="form-row">
+          <div class="form-group">
+            <label>Contact Number <span>*</span></label>
+            <input type="tel" formControlName="contactNumber" />
+            <div
+              class="error"
+              *ngIf="applyForm.get('contactNumber')?.touched && applyForm.get('contactNumber')?.invalid"
+            >
+              Invalid number
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label>Email Address <span>*</span></label>
+            <input type="email" formControlName="email" />
+            <div
+              class="error"
+              *ngIf="applyForm.get('email')?.touched && applyForm.get('email')?.invalid"
+            >
+              Invalid email
+            </div>
+          </div>
+        </div>
+  
+        <div class="form-row">
+          <div class="form-group">
+            <label>Country <span>*</span></label>
+            <select formControlName="country">
+              <option value="" disabled>Select country</option>
+              <option *ngFor="let c of countries" [value]="c">{{ c }}</option>
+            </select>
+          </div>
+  
+          <div class="form-group">
+            <label>Driver / DSP Type <span>*</span></label>
+            <select formControlName="driverType">
+              <option value="" disabled>Select type</option>
+              <option *ngFor="let t of driverTypes" [value]="t">{{ t }}</option>
+            </select>
+          </div>
+        </div>
+  
+        <div class="form-group full">
+          <label>Company Profile and Details</label>
+          <textarea formControlName="companyProfile" rows="4"></textarea>
+        </div>
+  
+        <button
+          type="submit"
+          class="dsp-apply__submit"
+          [disabled]="applyForm.invalid"
+        >
+          Submit
+        </button>
+      </form>
+  
+      <!-- right: info panel -->
+      <aside class="dsp-apply__info">
+        <h2>eazeeship DSP APPLICATION</h2>
+        <p class="info__title">Apply Now</p>
+        <p>To apply, please submit the eazeeship DSP application form.</p>
+        <p>Only shortlisted candidates will be contacted.</p>
+        <!-- <img
+          src="assets/images/apply-illustration.png"
+          alt="Running courier"
+        /> -->
+      </aside>
+    </div>
+  </section>
+  

@@ -1,0 +1,85 @@
+.support-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 3rem 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+  
+    .support-left {
+      flex: 2;
+  
+      h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #111;
+        margin-bottom: 1rem;
+      }
+  
+      h2 {
+        font-size: 1.5rem;
+        color: #111;
+        position: relative;
+        display: inline-block;
+  
+        &::after {
+          content: '';
+          display: block;
+          width: 40%;
+          height: 2px;
+          background-color: #e53935;
+          margin-top: 4px;
+        }
+      }
+    }
+  
+    .support-right {
+      flex: 1;
+      max-width: 350px;
+  
+      .support-note {
+        font-size: 0.85rem;
+        color: #a1a5b2;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        text-align: right;
+      }
+  
+      .support-card {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        padding: 1rem 1.2rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        border: 1px solid #f1f1f1;
+  
+        .support-icon img {
+          width: 36px;
+          height: 36px;
+          opacity: 0.2;
+        }
+  
+        .support-info {
+          .query {
+            font-size: 1.1rem;
+            color: #e53935;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+          }
+  
+          .call {
+            font-size: 0.95rem;
+            color: #111;
+  
+            strong {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,70 @@
+.hero {
+    padding: 4rem 2rem;
+    background: #fefefe;
+  
+    .hero-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 2rem;
+      flex-wrap: wrap;
+  
+      .hero-text {
+        flex: 1;
+        max-width: 600px;
+  
+        .tagline {
+          color: #ff8c2b;
+          font-weight: 600;
+          font-size: 1.2rem;
+          margin-bottom: 1rem;
+        }
+  
+        .headline {
+          font-size: 3rem;
+          font-weight: 800;
+          margin-bottom: 1.5rem;
+          color: #111;
+          line-height: 1.2;
+        }
+  
+        .description {
+          font-size: 1.1rem;
+          color: #333;
+          margin-bottom: 2rem;
+          line-height: 1.6;
+        }
+  
+        .cta-button {
+          padding: 0.75rem 1.5rem;
+          background-color: transparent;
+          color: #ff8c2b;
+          border: 2px solid #ff8c2b;
+          font-weight: 600;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+  
+          &:hover {
+            background-color: #ff8c2b;
+            color: white;
+          }
+        }
+      }
+  
+      .hero-image {
+        flex: 1;
+        text-align: center;
+  
+        img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 12px;
+        }
+      }
+    }
+  }
+  

@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule, RouterLink, RouterLinkActive],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls:   ['./home.component.css']   // ← note the “s”
 })
 export class HomeComponent {
-  activeLink: string = 'services'; // Default active link
-
-  setActive(link: string) {
-    this.activeLink = link;
-  }
+  // you don’t actually need an `activeLink` field
+  // when you use RouterLinkActive on your anchors
 }
