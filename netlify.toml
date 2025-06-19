@@ -1,5 +1,5 @@
 [build]
-command = "npm run build:ssr"
+command = "ng build"
 commandOrigin = "config"
 publish = "dist/logistics/browser/browser"
 publishOrigin = " config"
