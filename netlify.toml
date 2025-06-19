@@ -1,11 +1,11 @@
-build:
-command: ng build
-commandOrigin: config
-publish: /opt/build/repo/dist/logistics/browser
-publishOrigin: config
-functionsDirectory: /opt/build/repo/netlify/functions
+[build]
+command = "ng build"
+commandOrigin = "config"
+publish = "/opt/build/repo/dist/logistics/browser"
+publishOrigin = " config"
+functionsDirectory =  "/opt/build/repo/netlify/functions"
 
-plugins:
-inputs: {}
-origin: config
-package: '@netlify/angular-runtime'
+[plugins]
+inputs = {}
+origin = "config"
+package = '@netlify/angular-runtime'
