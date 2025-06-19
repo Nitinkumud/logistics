@@ -1,7 +1,7 @@
 [build]
-command = "ng build"
+command = npm run build:ssr"
 commandOrigin = "config"
-publish = "/opt/build/repo/dist/logistics/browser"
+publish = "dist/logistics/browser/"
 publishOrigin = " config"
 functionsDirectory =  "/opt/build/repo/netlify/functions"
 
