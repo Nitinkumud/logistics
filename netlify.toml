@@ -1,5 +1,6 @@
 [build]
-  command = "ng build --configuration production"
+  command = "ng build"
+  functions = "netlify/functions"
   publish = "dist/logistics/browser"
 
 [[plugins]]
