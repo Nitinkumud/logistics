@@ -5,7 +5,7 @@ publish = "/opt/build/repo/dist/logistics/browser"
 publishOrigin = " config"
 functionsDirectory =  "/opt/build/repo/netlify/functions"
 
-[plugins]
+[[plugins]]
 inputs = {}
 origin = "config"
 package = '@netlify/angular-runtime'
