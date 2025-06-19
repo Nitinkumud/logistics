@@ -1,7 +1,7 @@
 [build]
 command = "npm run build:ssr"
 commandOrigin = "config"
-publish = "dist/logistics/browser/"
+publish = "dist/logistics/browser/browser"
 publishOrigin = " config"
 functionsDirectory =  "/opt/build/repo/netlify/functions"
 
