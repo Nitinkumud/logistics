@@ -1,7 +1,7 @@
 [build]
-  command = "ng build"
-  functions = "netlify/functions"
-  publish = "dist/logistics/browser"
+command = "ng build"
+functions = "netlify/functions"
+publish = "dist/logistics/browser"
 
 [[plugins]]
-  package = "@netlify/angular-runtime"
+package = "@netlify/angular-runtime"
